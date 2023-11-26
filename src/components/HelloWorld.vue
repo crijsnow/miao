@@ -1,4 +1,5 @@
 <template>
+<!-- 这个components文件夹就是用来存放组件的 -->
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
