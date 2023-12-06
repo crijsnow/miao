@@ -18,7 +18,11 @@ export default {
     props:{
         value:{
             type:String,
-            default:'水晶'
+            default:'水晶',
+            required:false,
+            validator(value){
+                return value.length===2
+            }
         }
     },
     methods:{

@@ -1,20 +1,18 @@
 <template>
-  <div class="son">{{color}}</div>
+  <div class="son" v-mysize="'120px'" v-drag>{{color}}</div>
 </template>
 
 <script>
 export default {
-    inject:['testProvide','color'],
-    created(){
-        console.log(this.testProvide)
-    }
+    inject:['testProvide','color','testObject'],
 }
 </script>
 
 <style>
-    .son{
-        height: 100px;
-        width: 100px;
-        background-color: rgb(10, 230, 10);
-    }
+.son {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(10, 230, 10);
+}
 </style>

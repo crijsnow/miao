@@ -1,5 +1,5 @@
 <template>
-    <div class="title">{{title}}<button @click="chg">chg</button>
+    <div class="title">{{title}}<button @click="chg" :msg="msg">chg</button>
     <!-- 不能像div一样直接给组件设置CSS样式，但是可以用v-bind -->
     <HumButton></HumButton>
     </div>
@@ -32,6 +32,11 @@ export default {
             ......
         }
      */
+    data(){
+        return {
+            msg:'msg'
+        }
+    },
     props:{
         title:{
             type:String,
@@ -56,22 +61,23 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>//scoped可以让样式局限到当前组件
-div{
-    border: 2px solid blue;
+<style lang="less" scoped>
+//scoped可以让样式局限到当前组件
+div {
+  border: 2px solid blue;
 }
-.set{
-    display: block;
+.set {
+  display: block;
 }
-.title{
-    overflow: hidden;
-    white-space:nowrap;
-    width: auto;
-    height: 100;
-    text-align: center;
-    line-height: 100px;
-    background-color: rgb(162, 135, 235);
-    margin: 10px 15px;
-    color: white;
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  width: auto;
+  height: 100;
+  text-align: center;
+  line-height: 100px;
+  background-color: rgb(162, 135, 235);
+  margin: 10px 15px;
+  color: white;
 }
 </style>

@@ -15,7 +15,6 @@ export default {
     },
     created(){
         Bus.$on('sendMsg',(msg)=>{
-            console.log(2)
             this.Msg.push(msg)
         })
     }
@@ -28,6 +27,7 @@ export default {
     height: 200px;
     border: 2px solid black;
     text-align: center;
+    overflow: hidden;
     .box{
         display: block;
         width: 150px;
